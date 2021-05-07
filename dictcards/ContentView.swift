@@ -8,9 +8,51 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var searchQuery: String = "home"
+    @State private var description: CFString = "" as CFString
+    
+    var words = [
+        "word1",
+        "word2",
+        "word3"
+    ]
+
+    func getDefinition()
+    {
+        let x = DCSGetTermRangeInString(nil, $searchQuery.wrappedValue as CFString, 0)
+        let textDefinition = DCSCopyTextDefinition(nil, searchQuery as CFString, x)
+        let text = textDefinition?.takeRetainedValue()
+        description = text ?? "" as CFString
+    }
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            VStack {
+                let searchView = VStack {
+                    TextField("Search words", text: $searchQuery)
+                    Button(action: getDefinition) {
+                        Text("Search")
+                    }
+                    Spacer()
+                    Text(description as String)
+                }
+                
+                NavigationLink(destination: searchView) {
+                    Text("Search")
+                }
+                
+                List {
+                    ForEach(words, id: \.self) { word in
+                        NavigationLink(destination: Text(word)) {
+                            Text(word)
+                        }
+                    }
+                }
+                .navigationTitle("Words")
+                .frame(minWidth: 300)
+            }
+            .navigationTitle("asdasd")
+        }
     }
 }
 
