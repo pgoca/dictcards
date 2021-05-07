@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var searchQuery: String = "home"
+    @State private var searchQuery: String = ""
     @State private var description: CFString = "" as CFString
     
     var words = [
-        "word1",
-        "word2",
-        "word3"
+        "home",
+        "door",
+        "yellow"
     ]
 
     func getDefinition()
@@ -43,7 +43,7 @@ struct ContentView: View {
                 
                 List {
                     ForEach(words, id: \.self) { word in
-                        NavigationLink(destination: Text(word)) {
+                        NavigationLink(destination: DefinitionView(word)) {
                             Text(word)
                         }
                     }

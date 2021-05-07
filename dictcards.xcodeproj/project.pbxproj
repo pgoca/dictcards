@@ -11,6 +11,7 @@
 		F62E9C422642F89B00A8D714 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62E9C412642F89B00A8D714 /* ContentView.swift */; };
 		F62E9C442642F89B00A8D714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F62E9C432642F89B00A8D714 /* Assets.xcassets */; };
 		F62E9C472642F89B00A8D714 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F62E9C462642F89B00A8D714 /* Preview Assets.xcassets */; };
+		F66F93BD2645E99B0038C11D /* DefinitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66F93BC2645E99B0038C11D /* DefinitionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		F62E9C462642F89B00A8D714 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F62E9C482642F89B00A8D714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F62E9C492642F89B00A8D714 /* dictcards.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = dictcards.entitlements; sourceTree = "<group>"; };
+		F66F93BC2645E99B0038C11D /* DefinitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		F62E9C3E2642F89B00A8D714 /* dictcards */ = {
 			isa = PBXGroup;
 			children = (
+				F66F93BB2645E9820038C11D /* Views */,
 				F62E9C3F2642F89B00A8D714 /* dictcardsApp.swift */,
 				F62E9C412642F89B00A8D714 /* ContentView.swift */,
 				F62E9C432642F89B00A8D714 /* Assets.xcassets */,
@@ -69,6 +72,14 @@
 				F62E9C462642F89B00A8D714 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F66F93BB2645E9820038C11D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F66F93BC2645E99B0038C11D /* DefinitionView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F66F93BD2645E99B0038C11D /* DefinitionView.swift in Sources */,
 				F62E9C422642F89B00A8D714 /* ContentView.swift in Sources */,
 				F62E9C402642F89B00A8D714 /* dictcardsApp.swift in Sources */,
 			);
